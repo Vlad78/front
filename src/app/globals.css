@@ -12,6 +12,7 @@ body {
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .container {
@@ -22,4 +23,18 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.theme {
+  transition: 1s all ease;
+}
+
+.dark {
+  background-color: #111;
+  color: #bbb;
+}
+
+.light {
+  background-color: white;
+  color: #111;
 }
