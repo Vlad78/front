@@ -6,10 +6,14 @@ export const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
   const [themeMode, setThemeMode] = useState("light");
+  console.log("🚀 ~ file: ThemeContext.js:9 ~ ThemeProvider ~ themeMode:", themeMode);
 
   const toggle = () => {
-    console.log("check");
-    setThemeMode((prev) => (prev === "light" ? setThemeMode("dark") : setThemeMode("light")));
+    if (themeMode !== undefined) {
+      setThemeMode((prev) => (prev === "dark" ? setThemeMode("light") : setThemeMode("dark")));
+    } else {
+      setThemeMode("light");
+    }
   };
 
   return (
